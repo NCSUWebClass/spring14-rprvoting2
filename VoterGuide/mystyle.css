@@ -1,15 +1,52 @@
-.candidate_table{
+.candidates {
+	border: 2px solid;
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	overflow: hidden; /*notice*/
+	color: #2275BB;
+}
+
+.candidate_table {
 	border-collapse: collapse;
 	padding: 5px;
 }
 
-.candidate_county_commission, .candidate_wake_da, .candidate_clerk_of_court, .candidate_nc_senate_15, .candidate_nc_house_49{
+.candidate_county_commission,.candidate_wake_da,.candidate_clerk_of_court,.candidate_nc_senate_15,.candidate_nc_house_49
+	{
 	background-color: #2275BB;
 	color: white;
 }
 
-.position{
-	text-align:center;
-	vertical-align:middle;
-	text-decoration:underline;
+.position {
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: underline;
+}
+
+.articles_table {
+	border-collapse: collapse;
+}
+
+.articles_table td {
+	padding: 10px;
+	text-align: center;
+}
+
+label#author {
+	font-size: 1em;
+	text-align: center;
+}
+
+#candidate_profiles_title {
+	text-align: center;
+	padding-top: 25px;
+}
+
+.ad_space {
+	height: 90px;
+	width: 720px;
+	background-color: red;
+	margin-left: auto;
+	margin-right: auto;
 }

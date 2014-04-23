@@ -17,7 +17,10 @@
 	Public Record</title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="http://raleighpublicrecord.org/xmlrpc.php" />
+
+<!-- Our added stylesheet -->
 <link rel="stylesheet" type="text/css" href="mystyle.css">
+
 <script>
 	function whichHeader() {
 		var screenWidth = document.documentElement.clientWidth, header_img;
@@ -54,52 +57,13 @@
 		s.parentNode.insertBefore(ga, s);
 	})();
 </script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-    $(".candidate_county_commission_item").hide();
-    $(".candidate_county_commission tr:first-child").show();
-    $(".candidate_table tr.candidate_county_commission").click(function(){
-    $(this).nextAll("tr.candidate_county_commission_item").fadeToggle("fast");
-     });
-  });
-  </script>
-<script type="text/javascript">
-$(document).ready(function() {
-    $(".candidate_wake_da_item").hide();
-    $(".candidate_wake_da tr:first-child").show();
-    $(".candidate_table tr.candidate_wake_da").click(function(){
-    $(this).nextAll("tr.candidate_wake_da_item").fadeToggle();
-     });
-  });
-  </script>
-<script type="text/javascript">
-$(document).ready(function() {
-    $(".candidate_clerk_of_court_item").hide();
-    $(".candidate_clerk_of_court tr:first-child").show();
-    $(".candidate_table tr.candidate_clerk_of_court").click(function(){
-    $(this).nextAll("tr.candidate_clerk_of_court_item").fadeToggle();
-     });
-  });
-</script>
-<script type="text/javascript">
-$(document).ready(function() {
-    $(".candidate_nc_senate_15_item").hide();
-    $(".candidate_nc_senate_15 tr:first-child").show();
-    $(".candidate_table tr.candidate_nc_senate_15").click(function(){
-    $(this).nextAll("tr.candidate_nc_senate_15_item").fadeToggle();
-     });
-  });
-</script>
-<script type="text/javascript">
-$(document).ready(function() {
-    $(".candidate_nc_house_49_item").hide();
-    $(".candidate_nc_house_49 tr:first-child").show();
-    $(".candidate_table tr.candidate_nc_house_49").click(function(){
-    $(this).nextAll("tr.candidate_nc_house_49_item").fadeToggle();
-     });
-  });
-</script>
+
+<!-- Added to create accordion menu -->
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="collapsiblemenu.js"></script>
+<!-- Replace src with path to JS file -->
+
 <link rel="alternate" type="application/rss+xml"
 	title="Raleigh Public Record &raquo; Feed"
 	href="http://raleighpublicrecord.org/feed/" />
@@ -515,56 +479,84 @@ $(document).ready(function() {
 						<p style="text-align: center;">
 							<strong>Get out and vote May 6!</strong>
 						</p>
-						
+
 						<div id="articles">
-							<p id="article1">
-								<a
-									href="http://raleighpublicrecord.org/2014-primary-election/2014/04/14/new-wake-da-will-face-challenges-of-growth-management">New
-									Wake DA Will Face Challenges of Growth, Management</a><br /> By
-								James Borden<br /> Colon Willoughby has been Wake County’s
-								district attorney for 28 years. He will not run again, and six
-								candidates have stepped up to vie for the job in the primary
-								election.
-							</p>
-							<p id="article2">
-								<a
-									href="http://raleighpublicrecord.org/2014-primary-election/2014/04/14/election-explainer-so-what-exactly-do-judges-do">Election
-									Explainer: So What Exactly Do Judges Do?</a><br /> By Ariella
-								Monti<br /> There are 17 judgeships up for grabs in this year’s
-								elections. We give you the lowdown on what these men and women
-								do.
-							</p>
-							<p id="article3">
-								<a
-									href="http://raleighpublicrecord.org/2014-primary-election/2014/04/14/county-commission-balance-to-be-tested-this-year">County
-									Commission Balance to be Tested This Year </a><br /> By Ariella
-								Monti<br /> Only one race for the County Commission is in the
-								May primary, but November could test the balance of power at the
-								Wake County Commissioner table.
-							</p>
-							<p id="article4">
-								<a
-									href="http://raleighpublicrecord.org/2014-primary-election/2014/04/14/no-same-day-registration-for-primary-election">No
-									Same-Day Registration for Primary Election</a><br /> By Jordan
-								Smith<br /> Several changes in voting will take effect this
-								year. The voting ID requirement will not take effect until 2016.
-							</p>
+							<table class="articles_table" cellspacing="0" cellpadding="0">
+								<colgroup>
+									<col width=300>
+									<col width=300>
+								</colgroup>
+								<tr>
+									<td>
+										<p id="article1">
+											<a
+												href="http://raleighpublicrecord.org/2014-primary-election/2014/04/14/new-wake-da-will-face-challenges-of-growth-management">
+												<strong>New Wake DA Will Face Challenges of Growth,
+													Management</strong>
+											</a><br /> <label id="author">By James Borden</label><br />
+											Colon Willoughby has been Wake County’s district attorney for
+											28 years. He will not run again, and six candidates have
+											stepped up to vie for the job in the primary election.
+										</p>
+									</td>
+									<td>
+										<p id="article2">
+											<a
+												href="http://raleighpublicrecord.org/2014-primary-election/2014/04/14/election-explainer-so-what-exactly-do-judges-do"><strong>Election
+													Explainer: So What Exactly Do Judges Do?</strong></a><br /> <label
+												id="author">By Ariella Monti</label><br /> There are 17
+											judgeships up for grabs in this year’s elections. We give you
+											the lowdown on what these men and women do.
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<p id="article3">
+											<a
+												href="http://raleighpublicrecord.org/2014-primary-election/2014/04/14/county-commission-balance-to-be-tested-this-year"><strong>County
+													Commission Balance to be Tested This Year</strong></a><br /> <label
+												id="author">By Ariella Monti</label><br /> Only one race
+											for the County Commission is in the May primary, but November
+											could test the balance of power at the Wake County
+											Commissioner table.
+										</p>
+									</td>
+									<td>
+										<p id="article4">
+											<a
+												href="http://raleighpublicrecord.org/2014-primary-election/2014/04/14/no-same-day-registration-for-primary-election"><strong>
+													No Same-Day Registration for Primary Election</strong></a><br /> <label
+												id="author">By Jordan Smith</label><br /> Several changes
+											in voting will take effect this year. The voting ID
+											requirement will not take effect until 2016.
+										</p>
+									</td>
+								</tr>
+							</table>
 						</div>
-						
-						<p>
-							<strong>Candidate Profiles</strong><br /> Process: We came up
-							with a list of questions for each office, and recorded our
-							interviews with each candidate. The responses you see are a
-							transcription of those interviews.
+
+						<div class="ad_space"></div>
+
+						<p id="candidate_profiles_title">
+							<strong>Candidate Profiles</strong><br />
 						</p>
-						<table class="candidate_table" dir="ltr" border="1" cellspacing="0" cellpadding="0">
-							<colgroup>
-								<col width="146" />
-								<col width="168" />
-							</colgroup>
-							<tbody>
+						<p>Process: We came up with a list of questions for each
+							office, and recorded our interviews with each candidate. The
+							responses you see are a transcription of those interviews.</p>
+						<p>Click on an office name below to see the candidates who are
+							running for that office.</p>
+						<div class="candidates">
+							<table class="candidate_table" dir="ltr" border="1"
+								cellspacing="0" cellpadding="0">
+								<colgroup>
+									<col width="146" />
+									<col width="168" />
+								</colgroup>
 								<tr class="candidate_county_commission">
-									<td class="position" data-sheets-value="[null,2,&quot;County Commission&quot;]"><img src="http://www.capell.es/imgs/arrow_down.png"></img> <strong>County
+									<td class="position"
+										data-sheets-value="[null,2,&quot;County Commission&quot;]"><img
+										src="http://www.capell.es/imgs/arrow_down.png"></img> <strong>County
 											Commission</strong></td>
 									<td></td>
 								</tr>
@@ -577,9 +569,11 @@ $(document).ready(function() {
 											Puryear</a></td>
 								</tr>
 								<tr class="candidate_wake_da">
-									<td class="position" data-sheets-value="[null,2,&quot;Wake DA &quot;]"><img src="http://www.capell.es/imgs/arrow_down.png"></img><strong>Wake
+									<td class="position"
+										data-sheets-value="[null,2,&quot;Wake DA &quot;]"><img
+										src="http://www.capell.es/imgs/arrow_down.png"></img><strong>Wake
 											DA</strong></td>
-									<td>&nbsp</td>
+									<td>&nbsp;</td>
 								</tr>
 								<tr class="candidate_wake_da_item">
 									<td
@@ -609,9 +603,11 @@ $(document).ready(function() {
 											Walter Bryant</a></td>
 								</tr>
 								<tr class="candidate_clerk_of_court">
-									<td	class="position" data-sheets-value="[null,2,&quot;Clerk of Superior Court&quot;]"><img src="http://www.capell.es/imgs/arrow_down.png"></img><strong>Clerk
+									<td class="position"
+										data-sheets-value="[null,2,&quot;Clerk of Superior Court&quot;]"><img
+										src="http://www.capell.es/imgs/arrow_down.png"></img><strong>Clerk
 											of Court</strong></td>
-									<td>&nbsp</td>
+									<td>&nbsp;</td>
 								</tr>
 								<tr class="candidate_clerk_of_court_item">
 									<td data-sheets-value="[null,2,&quot;Blair Williams&quot;]"><a
@@ -633,12 +629,14 @@ $(document).ready(function() {
 									<td data-sheets-value="[null,2,&quot;Joe E. Teague, Jr.&quot;]"><a
 										href="http://raleighpublicrecord.org/2014-primary-election/2014/04/14/clerk-of-superior-court-joe-teague">Joe
 											E. Teague, Jr.</a></td>
-									<td>&nbsp</td>
-								</tr>								
+									<td>&nbsp;</td>
+								</tr>
 								<tr class="candidate_nc_senate_15">
-									<td class="position" data-sheets-value="[null,2,&quot;NC Senate 15&quot;]"><img src="http://www.capell.es/imgs/arrow_down.png"></img><strong>NC
+									<td class="position"
+										data-sheets-value="[null,2,&quot;NC Senate 15&quot;]"><img
+										src="http://www.capell.es/imgs/arrow_down.png"></img><strong>NC
 											Senate 15</strong></td>
-									<td>&nbsp</td>
+									<td>&nbsp;</td>
 								</tr>
 								<tr class="candidate_nc_senate_15_item">
 									<td data-sheets-value="[null,2,&quot;Apryl Major&quot;]"><a
@@ -649,9 +647,11 @@ $(document).ready(function() {
 											Fulghum</a></td>
 								</tr>
 								<tr class="candidate_nc_house_49">
-									<td class="position" data-sheets-value="[null,2,&quot;NC House 49&quot;]"><img src="http://www.capell.es/imgs/arrow_down.png"></img><strong>NC
+									<td class="position"
+										data-sheets-value="[null,2,&quot;NC House 49&quot;]"><img
+										src="http://www.capell.es/imgs/arrow_down.png"></img><strong>NC
 											House 49</strong></td>
-									<td>&nbsp</td>
+									<td>&nbsp;</td>
 								</tr>
 								<tr class="candidate_nc_house_49_item">
 									<td data-sheets-value="[null,2,&quot;Kim Hanchette&quot;]"><a
@@ -661,349 +661,755 @@ $(document).ready(function() {
 										href="http://raleighpublicrecord.org/2014-primary-election/2014/04/14/nc-house-district-49-derek-kiszely">Derek
 											Kiszely</a></td>
 								</tr>
-							</tbody>
-						</table>
-					<p><center>Good journalism feeds your mind. Help us feed our fearless journalists.</center>&nbsp;</p>
-<aside class="module align-center full type-aside"><a href="http://raleighpublicrecord.org/donate/" target="_blank"><img class="aligncenter  wp-image-19747" alt="DonateButton-new" src="http://raleighpublicrecord.wpengine.netdna-cdn.com/files/2013/06/DonateButton-new.jpg" width="351" height="68" /></a></aside>
-<p>&nbsp;</p>
-	</div><!-- .entry-content -->
-		<footer class="post-meta bottom-meta">
- 		<div class="post-social clearfix"><div class="left"><span class="twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-url="http://raleighpublicrecord.org/news/2014/04/14/primary-election-guide-spring-2014/" data-text="Primary Election Guide &#8211; Spring 2014" data-via="ralpublicrecord"  >Tweet</a></span><span class="facebook"><fb:like href="http://raleighpublicrecord.org/news/2014/04/14/primary-election-guide-spring-2014/" send="false" layout="button_count" show_faces="false" action="like"></fb:like></span></div><div class="right"><span class="st_sharethis" displayText="Share"></span><span class="st_email" displayText="Email"></span><span class="print"><a href="#" onclick="window.print()" title="print this article" rel="nofollow"><i class="icon-print"></i> Print</a></span></div></div>
- 		<!-- Other posts in this series -->
- 		
-        <!-- Post tags -->
-            		<div class="tags clearfix">
-    			<h5>Filed Under:</h5>
-    			<ul>
-    				<li class="post-category-link"><a href="http://raleighpublicrecord.org/topics/2014-primary-election/" title="Read Stories in the 2014 Elections category"><i class="icon-white icon-tag"></i>2014 Elections</a></li><li class="post-category-link"><a href="http://raleighpublicrecord.org/topics/2014-primary-election-guide/" title="Read Stories in the 2014 Primary Election Guide category"><i class="icon-white icon-tag"></i>2014 Primary Election Guide</a></li><li class="post-category-link"><a href="http://raleighpublicrecord.org/topics/news/" title="Read Stories in the News category"><i class="icon-white icon-tag"></i>News</a></li><li class="post-tag-link"><a href="http://raleighpublicrecord.org/tag/election-guide/" title="Read Stories tagged with: election guide"><i class="icon-white icon-tag"></i>election guide</a></li>    			</ul>
-    		</div>
-    	
-    	
-		
-
-<div class="author-box author vcard clearfix">
-	<h5>About <span class="fn n">Staff</span><span class="author-posts-link"><a class="url" href="/author/rprstaffacct/" rel="author" title="See all posts by Staff">More by this author</a></span></h5><p>the energy behind the Raleigh Public Record.</p>
-	<ul class="social-links">
-		
-		
-					<li class="email">
-				<a href="mailto:editor@raleighpublicrecord.org" title="e-mail Staff"><i class="icon-mail"></i></a>
-			</li>
-		
-		
-			</ul>
-
-</div>
-
-
-	<div id="related-posts" class="idTabs row-fluid clearfix">
-		<ul id="related-post-nav" class="span4">
-			<li><h5>More About</h5></li>
-			<li><a href="#rp0">2014 Elections</a></li><li><a href="#rp1">News</a></li>		</ul>
-
-		<div class="related-items span8">
-							<div id="rp0">
-					<ul>
-											<li class="top-related clearfix">
-						<h3><a href="http://raleighpublicrecord.org/2014-primary-election/2014/04/15/nc-house-district-49-kim-hanchette/" title="Read: NC House District 49 - Kim Hanchette">NC House District 49 - Kim Hanchette</a></h3><p>This candidate could not be reached for an interview. Kim Hanchette
-Democrat
-Twitter
-Facebook
-Website
-Occupation: Founder of Diabetes Management Solutions
-City: Raleigh </p>						</li>
-						<li><a href="http://raleighpublicrecord.org/2014-primary-election/2014/04/15/district-attorney-jefferson-griffin/" title="2014 Elections">District Attorney - Jefferson Griffin</a></li><li><a href="http://raleighpublicrecord.org/2014-primary-election/2014/04/14/district-attorney-benjamin-zellinger/" title="2014 Elections">District Attorney - Benjamin Zellinger</a></li>					</ul>
-
-					<p><a href="http://raleighpublicrecord.org/topics/2014-primary-election/" title="2014 Elections" target="_blank"><strong>View all 2014 Elections Stories &rarr;</strong></a></p>
-				</div> <!-- /#rpX -->
-							<div id="rp1">
-					<ul>
-											<li class="top-related clearfix">
-						<h3><a href="http://raleighpublicrecord.org/news/2014/04/18/more-inpatient-beds-for-kids-at-holly-hill-hospital/" title="Read: More Inpatient Beds for Kids at Holly Hill Hospital">More Inpatient Beds for Kids at Holly Hill Hospital</a></h3><a href="http://raleighpublicrecord.org/news/2014/04/18/more-inpatient-beds-for-kids-at-holly-hill-hospital/"/><img width="60" height="60" src="http://raleighpublicrecord.wpengine.netdna-cdn.com/files/2014/04/HospitalFuturesite-60x60.jpg" class="attachment-60x60 wp-post-image" alt="The future site of Holly Hill Hospital." /></a><p>This week on the Development Beat: More beds at Holly Hill; pastries will compete with health food for downtown snacking; and no big blow-up dancing guys for a used car lot on Glenwood Avenue.</p>						</li>
-						<li><a href="http://raleighpublicrecord.org/news/city-council/2014/04/17/council-roundup-fiber-for-raleigh/" title="News">Council Roundup: Fiber for Raleigh</a></li><li><a href="http://raleighpublicrecord.org/news/2014/04/17/after-28-years-of-service-willoughby-moves-on/" title="News">After 28 Years of Service, Willoughby Moves On</a></li>					</ul>
-
-					<p><a href="http://raleighpublicrecord.org/topics/news/" title="News" target="_blank"><strong>View all News Stories &rarr;</strong></a></p>
-				</div> <!-- /#rpX -->
-					</div> <!-- /.items -->
-	</div> <!-- /#related-posts -->
-	</footer><!-- /.post-meta -->
-	</article><!-- #post-21357 -->
-
-
-			<nav id="nav-below" class="pager post-nav clearfix">
-				<div class="previous"><a href="http://raleighpublicrecord.org/2014-primary-election/2014/04/14/district-attorney-benjamin-zellinger/"><h5>Previous Story</h5><span class="meta-nav">District Attorney - Benjamin Zellinger</span></a></div><div class="next"><a href="http://raleighpublicrecord.org/2014-primary-election/2014/04/15/district-attorney-jefferson-griffin/"><h5>Next Story</h5><span class="meta-nav">District Attorney - Jefferson Griffin</span></a></div>			</nav><!-- #nav-below -->
-
-		
-	<div id="comments" class="clearfix">
-	
-	
-	
-									<div id="respond" class="comment-respond">
-				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/news/2014/04/14/primary-election-guide-spring-2014/#respond" style="display:none;">Cancel reply</a></small></h3>
-									<form action="http://raleighpublicrecord.org/wp-comments-post.php" method="post" id="commentform" class="comment-form">
-																			<p class="comment-notes">Your email address will not be published. Required fields are marked <span class="required">*</span></p>							<p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required='true' /></p>
-<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-required='true' /></p>
-<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" /></p>
-												<p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>						<p class="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
-							<input name="submit" type="submit" id="submit" value="Post Comment" />
-							<input type='hidden' name='comment_post_ID' value='21357' id='comment_post_ID' />
-<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+							</table>
+						</div>
+						<p>
+						<center>Good journalism feeds your mind. Help us feed our
+							fearless journalists.</center>
+						&nbsp;
 						</p>
-						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="7f240b80aa" /></p>					</form>
-							</div><!-- #respond -->
-			
-</div><!-- #comments -->
-</div><!--#content-->
+						<aside class="module align-center full type-aside">
+							<a href="http://raleighpublicrecord.org/donate/" target="_blank"><img
+								class="aligncenter  wp-image-19747" alt="DonateButton-new"
+								src="http://raleighpublicrecord.wpengine.netdna-cdn.com/files/2013/06/DonateButton-new.jpg"
+								width="351" height="68" /></a>
+						</aside>
+						<p>&nbsp;</p>
+					</div>
+					<!-- .entry-content -->
+					<footer class="post-meta bottom-meta">
+						<div class="post-social clearfix">
+							<div class="left">
+								<span class="twitter"><a href="http://twitter.com/share"
+									class="twitter-share-button"
+									data-url="http://raleighpublicrecord.org/news/2014/04/14/primary-election-guide-spring-2014/"
+									data-text="Primary Election Guide &#8211; Spring 2014"
+									data-via="ralpublicrecord">Tweet</a></span><span class="facebook"><fb:like
+										href="http://raleighpublicrecord.org/news/2014/04/14/primary-election-guide-spring-2014/"
+										send="false" layout="button_count" show_faces="false"
+										action="like"></fb:like></span>
+							</div>
+							<div class="right">
+								<span class="st_sharethis" displayText="Share"></span><span
+									class="st_email" displayText="Email"></span><span class="print"><a
+									href="#" onclick="window.print()" title="print this article"
+									rel="nofollow"><i class="icon-print"></i> Print</a></span>
+							</div>
+						</div>
+						<!-- Other posts in this series -->
 
-<aside id="sidebar" class="span4">
-		<div class="widget-area" role="complementary">
-		<aside id="text-420430028" class="widget widget-1 odd default widget_text clearfix"><h3 class="widgettitle">Help the Record Become Sustainable! </h3>			<div class="textwidget">Sunshine has a price. Help us illuminate dark places.
-We need your help to continue bringing you Raleigh news. To cover the bulk of our operating costs, we need to find 1,000 donors who can each contribute $10 per month. Can you help us reach our goal? 
-<a href="http://raleighpublicrecord.org/donate/" target="_blank"><center><img src="http://raleighpublicrecord.wpengine.netdna-cdn.com/files/2014/04/therm041114.png"></a></center>
-<center><a href="http://raleighpublicrecord.org/donate/">
-<img src="http://raleighpublicrecord.wpengine.netdna-cdn.com/files/2013/06/DonateButton-new.jpg" alt="donate"> 
-</center></a>
-<br style=îheight:10emî /></div>
-		</aside><aside id="text-420430029" class="widget widget-2 even default widget_text clearfix"><h3 class="widgettitle">Join us for Our Annual Pig Pickin&#8217;</h3>			<div class="textwidget">Local barbecue, local beer and of course, local news! This year we've got Chef Ashley Christensen cooking up some side dishes. Join us from 3-6 p.m. May 18 for all the fun. 
-<br style=îheight:4emî />
-<a href="http://raleighpublicrecord.org/events/" target="_blank">Get your tickets now to get $5 off registration!</a>
-<center><img src="http://raleighpublicrecord.wpengine.netdna-cdn.com/files/2011/09/pigpickinlogo.jpg"></center>
-<br style=îheight:10emî />
-</div>
-		</aside><aside id="text-420430015" class="widget widget-3 odd default widget_text clearfix"><h3 class="widgettitle">Thank You to Our Sponsors</h3>			<div class="textwidget"><br style=îheight:4emî />
-<center><a href="http://www.raleighpublicrecord.org/contact/">Contact us</a> for Raleigh Public Record sponsorship opportunities.</center>
-<hr>
-<div id="amznCharityBanner" style="position: relative">
- <div><a href="http://smile.amazon.com/ch/27-0864670"><img src="https://d1ev1rt26nhnwq.cloudfront.net/ccmtblv2.png" id="banner" style="border-style: none;"></a></div>
- <table style="position: absolute; text-align: center; width: 300px; top: 97px; height: 65px; vertical-align: middle"><tbody><tr><td style="vertical-align: middle">
-     <div style="max-height: 54px; overflow: hidden; padding-left: 10px; padding-right: 10px;">
-       <span style="font-family: Arial; font-size: 26px; line-height: 26px;" class="charityNameSpan">Raleigh Public Record</span></div></td></tr></tbody></table></div>
-    </div>
-		</aside><aside id="text-420430027" class="widget widget-4 even default widget_text clearfix"><h3 class="widgettitle">Volunteer to help the Record! </h3>			<div class="textwidget">We have a small, part-time staff, which means volunteers can make a huge difference. We need help at our regular fundraising events and to distribute voter guides each fall. We also love to collaborate with professionals who have a skill to share. Want to help? Sign up here: 
+						<!-- Post tags -->
+						<div class="tags clearfix">
+							<h5>Filed Under:</h5>
+							<ul>
+								<li class="post-category-link"><a
+									href="http://raleighpublicrecord.org/topics/2014-primary-election/"
+									title="Read Stories in the 2014 Elections category"><i
+										class="icon-white icon-tag"></i>2014 Elections</a></li>
+								<li class="post-category-link"><a
+									href="http://raleighpublicrecord.org/topics/2014-primary-election-guide/"
+									title="Read Stories in the 2014 Primary Election Guide category"><i
+										class="icon-white icon-tag"></i>2014 Primary Election Guide</a></li>
+								<li class="post-category-link"><a
+									href="http://raleighpublicrecord.org/topics/news/"
+									title="Read Stories in the News category"><i
+										class="icon-white icon-tag"></i>News</a></li>
+								<li class="post-tag-link"><a
+									href="http://raleighpublicrecord.org/tag/election-guide/"
+									title="Read Stories tagged with: election guide"><i
+										class="icon-white icon-tag"></i>election guide</a></li>
+							</ul>
+						</div>
 
-<style type="text/css">
-.link,
-.link a,
-#SignUp .signupframe {
+
+
+
+						<div class="author-box author vcard clearfix">
+							<h5>
+								About <span class="fn n">Staff</span><span
+									class="author-posts-link"><a class="url"
+									href="/author/rprstaffacct/" rel="author"
+									title="See all posts by Staff">More by this author</a></span>
+							</h5>
+							<p>the energy behind the Raleigh Public Record.</p>
+							<ul class="social-links">
+
+
+								<li class="email"><a
+									href="mailto:editor@raleighpublicrecord.org"
+									title="e-mail Staff"><i class="icon-mail"></i></a></li>
+
+
+							</ul>
+
+						</div>
+
+
+						<div id="related-posts" class="idTabs row-fluid clearfix">
+							<ul id="related-post-nav" class="span4">
+								<li><h5>More About</h5></li>
+								<li><a href="#rp0">2014 Elections</a></li>
+								<li><a href="#rp1">News</a></li>
+							</ul>
+
+							<div class="related-items span8">
+								<div id="rp0">
+									<ul>
+										<li class="top-related clearfix">
+											<h3>
+												<a
+													href="http://raleighpublicrecord.org/2014-primary-election/2014/04/15/nc-house-district-49-kim-hanchette/"
+													title="Read: NC House District 49 - Kim Hanchette">NC
+													House District 49 - Kim Hanchette</a>
+											</h3>
+											<p>This candidate could not be reached for an interview.
+												Kim Hanchette Democrat Twitter Facebook Website Occupation:
+												Founder of Diabetes Management Solutions City: Raleigh</p>
+										</li>
+										<li><a
+											href="http://raleighpublicrecord.org/2014-primary-election/2014/04/15/district-attorney-jefferson-griffin/"
+											title="2014 Elections">District Attorney - Jefferson
+												Griffin</a></li>
+										<li><a
+											href="http://raleighpublicrecord.org/2014-primary-election/2014/04/14/district-attorney-benjamin-zellinger/"
+											title="2014 Elections">District Attorney - Benjamin
+												Zellinger</a></li>
+									</ul>
+
+									<p>
+										<a
+											href="http://raleighpublicrecord.org/topics/2014-primary-election/"
+											title="2014 Elections" target="_blank"><strong>View
+												all 2014 Elections Stories &rarr;</strong></a>
+									</p>
+								</div>
+								<!-- /#rpX -->
+								<div id="rp1">
+									<ul>
+										<li class="top-related clearfix">
+											<h3>
+												<a
+													href="http://raleighpublicrecord.org/news/2014/04/18/more-inpatient-beds-for-kids-at-holly-hill-hospital/"
+													title="Read: More Inpatient Beds for Kids at Holly Hill Hospital">More
+													Inpatient Beds for Kids at Holly Hill Hospital</a>
+											</h3> <a
+											href="http://raleighpublicrecord.org/news/2014/04/18/more-inpatient-beds-for-kids-at-holly-hill-hospital/" /><img
+											width="60" height="60"
+											src="http://raleighpublicrecord.wpengine.netdna-cdn.com/files/2014/04/HospitalFuturesite-60x60.jpg"
+											class="attachment-60x60 wp-post-image"
+											alt="The future site of Holly Hill Hospital." /></a>
+											<p>This week on the Development Beat: More beds at Holly
+												Hill; pastries will compete with health food for downtown
+												snacking; and no big blow-up dancing guys for a used car lot
+												on Glenwood Avenue.</p>
+										</li>
+										<li><a
+											href="http://raleighpublicrecord.org/news/city-council/2014/04/17/council-roundup-fiber-for-raleigh/"
+											title="News">Council Roundup: Fiber for Raleigh</a></li>
+										<li><a
+											href="http://raleighpublicrecord.org/news/2014/04/17/after-28-years-of-service-willoughby-moves-on/"
+											title="News">After 28 Years of Service, Willoughby Moves
+												On</a></li>
+									</ul>
+
+									<p>
+										<a href="http://raleighpublicrecord.org/topics/news/"
+											title="News" target="_blank"><strong>View all
+												News Stories &rarr;</strong></a>
+									</p>
+								</div>
+								<!-- /#rpX -->
+							</div>
+							<!-- /.items -->
+						</div>
+						<!-- /#related-posts -->
+					</footer>
+					<!-- /.post-meta -->
+				</article>
+				<!-- #post-21357 -->
+
+
+				<nav id="nav-below" class="pager post-nav clearfix">
+					<div class="previous">
+						<a
+							href="http://raleighpublicrecord.org/2014-primary-election/2014/04/14/district-attorney-benjamin-zellinger/"><h5>Previous
+								Story</h5> <span class="meta-nav">District Attorney - Benjamin
+								Zellinger</span></a>
+					</div>
+					<div class="next">
+						<a
+							href="http://raleighpublicrecord.org/2014-primary-election/2014/04/15/district-attorney-jefferson-griffin/"><h5>Next
+								Story</h5> <span class="meta-nav">District Attorney -
+								Jefferson Griffin</span></a>
+					</div>
+				</nav>
+				<!-- #nav-below -->
+
+
+				<div id="comments" class="clearfix">
+
+
+
+					<div id="respond" class="comment-respond">
+						<h3 id="reply-title" class="comment-reply-title">
+							Leave a Reply <small><a rel="nofollow"
+								id="cancel-comment-reply-link"
+								href="/news/2014/04/14/primary-election-guide-spring-2014/#respond"
+								style="display: none;">Cancel reply</a></small>
+						</h3>
+						<form action="http://raleighpublicrecord.org/wp-comments-post.php"
+							method="post" id="commentform" class="comment-form">
+							<p class="comment-notes">
+								Your email address will not be published. Required fields are
+								marked <span class="required">*</span>
+							</p>
+							<p class="comment-form-author">
+								<label for="author">Name <span class="required">*</span></label>
+								<input id="author" name="author" type="text" value="" size="30"
+									aria-required='true' />
+							</p>
+							<p class="comment-form-email">
+								<label for="email">Email <span class="required">*</span></label>
+								<input id="email" name="email" type="text" value="" size="30"
+									aria-required='true' />
+							</p>
+							<p class="comment-form-url">
+								<label for="url">Website</label> <input id="url" name="url"
+									type="text" value="" size="30" />
+							</p>
+							<p class="comment-form-comment">
+								<label for="comment">Comment</label>
+								<textarea id="comment" name="comment" cols="45" rows="8"
+									aria-required="true"></textarea>
+							</p>
+							<p class="form-allowed-tags">
+								You may use these <abbr title="HyperText Markup Language">HTML</abbr>
+								tags and attributes:
+								<code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt;
+									&lt;abbr title=&quot;&quot;&gt; &lt;acronym
+									title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote
+									cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del
+									datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q
+									cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code>
+							</p>
+							<p class="form-submit">
+								<input name="submit" type="submit" id="submit"
+									value="Post Comment" /> <input type='hidden'
+									name='comment_post_ID' value='21357' id='comment_post_ID' /> <input
+									type='hidden' name='comment_parent' id='comment_parent'
+									value='0' />
+							</p>
+							<p style="display: none;">
+								<input type="hidden" id="akismet_comment_nonce"
+									name="akismet_comment_nonce" value="7f240b80aa" />
+							</p>
+						</form>
+					</div>
+					<!-- #respond -->
+
+				</div>
+				<!-- #comments -->
+			</div>
+			<!--#content-->
+
+
+
+			<aside id="sidebar" class="span4">
+				<div class="widget-area" role="complementary">
+					<aside id="text-420430028"
+						class="widget widget-1 odd default widget_text clearfix">
+						<h3 class="widgettitle">Help the Record Become Sustainable!</h3>
+						<div class="textwidget">
+							Sunshine has a price. Help us illuminate dark places. We need
+							your help to continue bringing you Raleigh news. To cover the
+							bulk of our operating costs, we need to find 1,000 donors who can
+							each contribute $10 per month. Can you help us reach our goal? <a
+								href="http://raleighpublicrecord.org/donate/" target="_blank"><center>
+									<img
+										src="http://raleighpublicrecord.wpengine.netdna-cdn.com/files/2014/04/therm041114.png"></a>
+							</center>
+							<center>
+								<a href="http://raleighpublicrecord.org/donate/"> <img
+									src="http://raleighpublicrecord.wpengine.netdna-cdn.com/files/2013/06/DonateButton-new.jpg"
+									alt="donate">
+							</center>
+							</a> <br style="îheight: 10emî" />
+						</div>
+					</aside>
+					<aside id="text-420430029"
+						class="widget widget-2 even default widget_text clearfix">
+						<h3 class="widgettitle">Join us for Our Annual Pig
+							Pickin&#8217;</h3>
+						<div class="textwidget">
+							Local barbecue, local beer and of course, local news! This year
+							we've got Chef Ashley Christensen cooking up some side dishes.
+							Join us from 3-6 p.m. May 18 for all the fun. <br
+								style="îheight: 4emî" /> <a
+								href="http://raleighpublicrecord.org/events/" target="_blank">Get
+								your tickets now to get $5 off registration!</a>
+							<center>
+								<img
+									src="http://raleighpublicrecord.wpengine.netdna-cdn.com/files/2011/09/pigpickinlogo.jpg">
+							</center>
+							<br style="îheight: 10emî" />
+						</div>
+					</aside>
+					<aside id="text-420430015"
+						class="widget widget-3 odd default widget_text clearfix">
+						<h3 class="widgettitle">Thank You to Our Sponsors</h3>
+						<div class="textwidget">
+							<br style="îheight: 4emî" />
+							<center>
+								<a href="http://www.raleighpublicrecord.org/contact/">Contact
+									us</a> for Raleigh Public Record sponsorship opportunities.
+							</center>
+							<hr>
+							<div id="amznCharityBanner" style="position: relative">
+								<div>
+									<a href="http://smile.amazon.com/ch/27-0864670"><img
+										src="https://d1ev1rt26nhnwq.cloudfront.net/ccmtblv2.png"
+										id="banner" style="border-style: none;"></a>
+								</div>
+								<table
+									style="position: absolute; text-align: center; width: 300px; top: 97px; height: 65px; vertical-align: middle">
+									<tbody>
+										<tr>
+											<td style="vertical-align: middle">
+												<div
+													style="max-height: 54px; overflow: hidden; padding-left: 10px; padding-right: 10px;">
+													<span
+														style="font-family: Arial; font-size: 26px; line-height: 26px;"
+														class="charityNameSpan">Raleigh Public Record</span>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</aside>
+					<aside id="text-420430027"
+						class="widget widget-4 even default widget_text clearfix">
+						<h3 class="widgettitle">Volunteer to help the Record!</h3>
+						<div class="textwidget">
+							We have a small, part-time staff, which means volunteers can make
+							a huge difference. We need help at our regular fundraising events
+							and to distribute voter guides each fall. We also love to
+							collaborate with professionals who have a skill to share. Want to
+							help? Sign up here:
+
+							<style type="text/css">
+.link,.link a,#SignUp .signupframe {
 	color: #226699;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 13px;
-	}
-	.link,
-	.link a {
-		text-decoration: none;
-		}
-	#SignUp .signupframe {
-		border: 1px solid #000000;
-		background: #ffffff;
-		}
+}
+
+.link,.link a {
+	text-decoration: none;
+}
+
+#SignUp .signupframe {
+	border: 1px solid #000000;
+	background: #ffffff;
+}
+
 #SignUp .signupframe .required {
 	font-size: 10px;
-	}
+}
 </style>
-<script type="text/javascript" src="//app.icontact.com/icp/loadsignup.php/form.js?c=1066469&l=3762&f=6636"></script>
-<span class="link"><a href="http://www.icontact.com">Email Marketing</a> You Can Trust</span>
+							<script type="text/javascript"
+								src="//app.icontact.com/icp/loadsignup.php/form.js?c=1066469&l=3762&f=6636"></script>
+							<span class="link"><a href="http://www.icontact.com">Email
+									Marketing</a> You Can Trust</span>
 
-</div>
-		</aside>	</div><!-- .widget-area -->
-	</aside>
-
-	</div> <!-- #main -->
-
-</div><!-- #page -->
-
-<div class="footer-bg clearfix">
-	<footer id="site-footer">
-		<div id="supplementary" class="row-fluid">
-			
-<div class="span3 widget-area" role="complementary">
-	<ul id="menu-footer-navigation" class="menu"><li class="menu-label">Raleigh Public Record</li><li id="menu-item-19056" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19056"><a href="http://raleighpublicrecord.org/about/borrow-our-content/">Borrow Our Content</a></li>
-<li id="menu-item-19733" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19733"><a href="http://raleighpublicrecord.org/privacy-policy/">Privacy Policy</a></li>
-<li id="menu-item-19735" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19735"><a href="http://raleighpublicrecord.org/comments-policy/">Comments Policy</a></li>
-<li id="menu-item-19737" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19737"><a href="http://raleighpublicrecord.org/sponsorshippsa-policy/">Sponsorship/PSA Policy</a></li>
-<li id="menu-item-19741" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19741"><a href="http://raleighpublicrecord.org/transparency-2/fundraising-and-donations-policies/">Fundraising and Donations Policies</a></li>
-<li id="menu-item-19744" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19744"><a href="http://raleighpublicrecord.org/transparency-2/ethics_bylaws/">Ethics and Bylaws</a></li>
-</ul></div>
-
-<div class="span6 widget-area" role="complementary">
-	<div class="widget largo-footer-featured"><h2 class="widgettitle">In Case You Missed It</h2>
-			             	                   	<div class="post-lead clearfix">
-                      	<img width="60" height="60" src="http://raleighpublicrecord.wpengine.netdna-cdn.com/files/2011/04/parking_faytteville-60x60.jpg" class="attachment-60x60 wp-post-image" alt="The Fayetteville District is the most desired on-street parking zone in the downtown area." />                      	<h5><a href="http://raleighpublicrecord.org/news/2013/06/03/the-state-of-parking-in-downtown-raleigh/">The State of Parking in Downtown Raleigh</a></h5>
-                      	<p>Parking in downtown Raleigh is a source of constant questions, along with some complaints. While most downtown Raleigh residents and visitors have grown accustomed to paying for public parking, some remain confused about where to find it and how it works. </p>                  	</div> <!-- /.post-lead -->
-	                              	<div class="post-lead clearfix">
-                      	                      	<h5><a href="http://raleighpublicrecord.org/news/city-council/2013/05/23/council-roundup-glenwood-pedestrian-bridge-approved/">Council Roundup: Glenwood Pedestrian Bridge Approved</a></h5>
-                      	<p>Raleigh City Council members Tuesday approved a pedestrian bridge across Glenwood Avenue at Crabtree Valley mall, along with a new development planned for the traffic-plagued intersection. As part of a deal to build a mixed-use development on Charles Drive near Crabtree mall, the developer offered to build the pedestrian bridge to span one of the busiest sections of road in the city, Glenwood Avenue just north of the I-440 intersection. </p>                  	</div> <!-- /.post-lead -->
-	            	            
-		</div></div>
-
-<div class="span3 widget-area" role="complementary">
-	<div class="widget widget_search"><h2 class="widgettitle">Search This Site</h2>
-<div class="gcs_container">
-	<script>
-	  (function() {
-	    var cx = '015011169642891997479:-blbi45uw-a';
-	    var gcse = document.createElement('script');
-	    gcse.type = 'text/javascript';
-	    gcse.async = true;
-	    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-	        '//www.google.com/cse/cse.js?cx=' + cx;
-	    var s = document.getElementsByTagName('script')[0];
-	    s.parentNode.insertBefore(gcse, s);
-	  })();
-	</script>
-	<gcse:search></gcse:search>
-</div>
-
-</div><div class="widget widget_archive"><h2 class="widgettitle">Browse Archives</h2>		<select name="archive-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'> <option value="">Select Month</option> 	<option value='http://raleighpublicrecord.org/2014/04/'> April 2014 </option>
-	<option value='http://raleighpublicrecord.org/2014/03/'> March 2014 </option>
-	<option value='http://raleighpublicrecord.org/2014/02/'> February 2014 </option>
-	<option value='http://raleighpublicrecord.org/2014/01/'> January 2014 </option>
-	<option value='http://raleighpublicrecord.org/2013/12/'> December 2013 </option>
-	<option value='http://raleighpublicrecord.org/2013/11/'> November 2013 </option>
-	<option value='http://raleighpublicrecord.org/2013/10/'> October 2013 </option>
-	<option value='http://raleighpublicrecord.org/2013/09/'> September 2013 </option>
-	<option value='http://raleighpublicrecord.org/2013/08/'> August 2013 </option>
-	<option value='http://raleighpublicrecord.org/2013/07/'> July 2013 </option>
-	<option value='http://raleighpublicrecord.org/2013/06/'> June 2013 </option>
-	<option value='http://raleighpublicrecord.org/2013/05/'> May 2013 </option>
-	<option value='http://raleighpublicrecord.org/2013/04/'> April 2013 </option>
-	<option value='http://raleighpublicrecord.org/2013/03/'> March 2013 </option>
-	<option value='http://raleighpublicrecord.org/2013/02/'> February 2013 </option>
-	<option value='http://raleighpublicrecord.org/2013/01/'> January 2013 </option>
-	<option value='http://raleighpublicrecord.org/2012/12/'> December 2012 </option>
-	<option value='http://raleighpublicrecord.org/2012/11/'> November 2012 </option>
-	<option value='http://raleighpublicrecord.org/2012/10/'> October 2012 </option>
-	<option value='http://raleighpublicrecord.org/2012/09/'> September 2012 </option>
-	<option value='http://raleighpublicrecord.org/2012/08/'> August 2012 </option>
-	<option value='http://raleighpublicrecord.org/2012/07/'> July 2012 </option>
-	<option value='http://raleighpublicrecord.org/2012/06/'> June 2012 </option>
-	<option value='http://raleighpublicrecord.org/2012/05/'> May 2012 </option>
-	<option value='http://raleighpublicrecord.org/2012/04/'> April 2012 </option>
-	<option value='http://raleighpublicrecord.org/2012/03/'> March 2012 </option>
-	<option value='http://raleighpublicrecord.org/2012/02/'> February 2012 </option>
-	<option value='http://raleighpublicrecord.org/2012/01/'> January 2012 </option>
-	<option value='http://raleighpublicrecord.org/2011/12/'> December 2011 </option>
-	<option value='http://raleighpublicrecord.org/2011/11/'> November 2011 </option>
-	<option value='http://raleighpublicrecord.org/2011/10/'> October 2011 </option>
-	<option value='http://raleighpublicrecord.org/2011/09/'> September 2011 </option>
-	<option value='http://raleighpublicrecord.org/2011/08/'> August 2011 </option>
-	<option value='http://raleighpublicrecord.org/2011/07/'> July 2011 </option>
-	<option value='http://raleighpublicrecord.org/2011/06/'> June 2011 </option>
-	<option value='http://raleighpublicrecord.org/2011/05/'> May 2011 </option>
-	<option value='http://raleighpublicrecord.org/2011/04/'> April 2011 </option>
-	<option value='http://raleighpublicrecord.org/2011/03/'> March 2011 </option>
-	<option value='http://raleighpublicrecord.org/2011/02/'> February 2011 </option>
-	<option value='http://raleighpublicrecord.org/2011/01/'> January 2011 </option>
-	<option value='http://raleighpublicrecord.org/2010/12/'> December 2010 </option>
-	<option value='http://raleighpublicrecord.org/2010/11/'> November 2010 </option>
-	<option value='http://raleighpublicrecord.org/2010/10/'> October 2010 </option>
-	<option value='http://raleighpublicrecord.org/2010/09/'> September 2010 </option>
-	<option value='http://raleighpublicrecord.org/2010/08/'> August 2010 </option>
-	<option value='http://raleighpublicrecord.org/2010/07/'> July 2010 </option>
-	<option value='http://raleighpublicrecord.org/2010/06/'> June 2010 </option>
-	<option value='http://raleighpublicrecord.org/2010/05/'> May 2010 </option>
-	<option value='http://raleighpublicrecord.org/2010/04/'> April 2010 </option>
-	<option value='http://raleighpublicrecord.org/2010/03/'> March 2010 </option>
-	<option value='http://raleighpublicrecord.org/2010/02/'> February 2010 </option>
-	<option value='http://raleighpublicrecord.org/2010/01/'> January 2010 </option>
-	<option value='http://raleighpublicrecord.org/2009/12/'> December 2009 </option>
-	<option value='http://raleighpublicrecord.org/2009/11/'> November 2009 </option>
-	<option value='http://raleighpublicrecord.org/2009/10/'> October 2009 </option>
-	<option value='http://raleighpublicrecord.org/2009/09/'> September 2009 </option>
-	<option value='http://raleighpublicrecord.org/2009/08/'> August 2009 </option>
-	<option value='http://raleighpublicrecord.org/2009/07/'> July 2009 </option>
-	<option value='http://raleighpublicrecord.org/2009/06/'> June 2009 </option>
-	<option value='http://raleighpublicrecord.org/2009/05/'> May 2009 </option>
-	<option value='http://raleighpublicrecord.org/2009/04/'> April 2009 </option>
-	<option value='http://raleighpublicrecord.org/2009/03/'> March 2009 </option>
-	<option value='http://raleighpublicrecord.org/2009/02/'> February 2009 </option>
-	<option value='http://raleighpublicrecord.org/2009/01/'> January 2009 </option>
-	<option value='http://raleighpublicrecord.org/2008/12/'> December 2008 </option>
-	<option value='http://raleighpublicrecord.org/2008/11/'> November 2008 </option>
-	<option value='http://raleighpublicrecord.org/2008/09/'> September 2008 </option>
- </select>
-</div>		<ul id="ft-social" class="social-icons">
-			<li><a href="http://raleighpublicrecord.org/feed/" title="Link to RSS Feed"><i class="icon-rss"></i></a></li><li><a href="http://www.facebook.com/raleighpublicrecord" title="Link to Facebook Profile"><i class="icon-facebook"></i></a></li><li><a href="https://twitter.com/ralpublicrecord" title="Link to Twitter Page"><i class="icon-twitter"></i></a></li><li><a href="https://plus.google.com/u/0/104286619256994004238" title="Link to Google Plus Page"><i class="icon-gplus"></i></a></li>		</ul>
-	</div>
+						</div>
+					</aside>
+				</div>
+				<!-- .widget-area -->
+			</aside>
 
 		</div>
-		<div id="boilerplate" class="row-fluid clearfix">
-			<p>&copy; Copyright 2014, Raleigh Public Record</p>
-			<ul id="menu-footer-bottom" class="menu"><li id="menu-item-19742" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19742"><a href="http://raleighpublicrecord.org/transparency-2/financials/">Financials</a></li>
-<li id="menu-item-19731" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19731"><a href="http://raleighpublicrecord.org/terms-of-use-2/">Terms of Use</a></li>
-<li id="menu-item-19743" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19743"><a href="http://raleighpublicrecord.org/privacy-policy/">Privacy Policy</a></li>
-</ul>			<div class="footer-bottom clearfix">
-				<!-- If you enjoy this theme and use it on a production site we would appreciate it if you would leave the credit in place. Thanks :) -->
-				<p class="footer-credit">This site built with <a href="http://largoproject.org">Project Largo</a> from the <a href="http://investigativenewsnetwork.org">Investigative News Network</a> and proudly powered by <a href="http://wordpress.org" rel="nofollow">WordPress</a>.</p>
-				<p class="back-to-top"><a href="#top">Back to top &uarr;</a></p>
+		<!-- #main -->
+
+	</div>
+	<!-- #page -->
+
+	<div class="footer-bg clearfix">
+		<footer id="site-footer">
+			<div id="supplementary" class="row-fluid">
+
+				<div class="span3 widget-area" role="complementary">
+					<ul id="menu-footer-navigation" class="menu">
+						<li class="menu-label">Raleigh Public Record</li>
+						<li id="menu-item-19056"
+							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19056"><a
+							href="http://raleighpublicrecord.org/about/borrow-our-content/">Borrow
+								Our Content</a></li>
+						<li id="menu-item-19733"
+							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19733"><a
+							href="http://raleighpublicrecord.org/privacy-policy/">Privacy
+								Policy</a></li>
+						<li id="menu-item-19735"
+							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19735"><a
+							href="http://raleighpublicrecord.org/comments-policy/">Comments
+								Policy</a></li>
+						<li id="menu-item-19737"
+							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19737"><a
+							href="http://raleighpublicrecord.org/sponsorshippsa-policy/">Sponsorship/PSA
+								Policy</a></li>
+						<li id="menu-item-19741"
+							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19741"><a
+							href="http://raleighpublicrecord.org/transparency-2/fundraising-and-donations-policies/">Fundraising
+								and Donations Policies</a></li>
+						<li id="menu-item-19744"
+							class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19744"><a
+							href="http://raleighpublicrecord.org/transparency-2/ethics_bylaws/">Ethics
+								and Bylaws</a></li>
+					</ul>
+				</div>
+
+				<div class="span6 widget-area" role="complementary">
+					<div class="widget largo-footer-featured">
+						<h2 class="widgettitle">In Case You Missed It</h2>
+						<div class="post-lead clearfix">
+							<img width="60" height="60"
+								src="http://raleighpublicrecord.wpengine.netdna-cdn.com/files/2011/04/parking_faytteville-60x60.jpg"
+								class="attachment-60x60 wp-post-image"
+								alt="The Fayetteville District is the most desired on-street parking zone in the downtown area." />
+							<h5>
+								<a
+									href="http://raleighpublicrecord.org/news/2013/06/03/the-state-of-parking-in-downtown-raleigh/">The
+									State of Parking in Downtown Raleigh</a>
+							</h5>
+							<p>Parking in downtown Raleigh is a source of constant
+								questions, along with some complaints. While most downtown
+								Raleigh residents and visitors have grown accustomed to paying
+								for public parking, some remain confused about where to find it
+								and how it works.</p>
+						</div>
+						<!-- /.post-lead -->
+						<div class="post-lead clearfix">
+							<h5>
+								<a
+									href="http://raleighpublicrecord.org/news/city-council/2013/05/23/council-roundup-glenwood-pedestrian-bridge-approved/">Council
+									Roundup: Glenwood Pedestrian Bridge Approved</a>
+							</h5>
+							<p>Raleigh City Council members Tuesday approved a pedestrian
+								bridge across Glenwood Avenue at Crabtree Valley mall, along
+								with a new development planned for the traffic-plagued
+								intersection. As part of a deal to build a mixed-use development
+								on Charles Drive near Crabtree mall, the developer offered to
+								build the pedestrian bridge to span one of the busiest sections
+								of road in the city, Glenwood Avenue just north of the I-440
+								intersection.</p>
+						</div>
+						<!-- /.post-lead -->
+
+					</div>
+				</div>
+
+				<div class="span3 widget-area" role="complementary">
+					<div class="widget widget_search">
+						<h2 class="widgettitle">Search This Site</h2>
+						<div class="gcs_container">
+							<script>
+								(function() {
+									var cx = '015011169642891997479:-blbi45uw-a';
+									var gcse = document.createElement('script');
+									gcse.type = 'text/javascript';
+									gcse.async = true;
+									gcse.src = (document.location.protocol == 'https:' ? 'https:'
+											: 'http:')
+											+ '//www.google.com/cse/cse.js?cx='
+											+ cx;
+									var s = document
+											.getElementsByTagName('script')[0];
+									s.parentNode.insertBefore(gcse, s);
+								})();
+							</script>
+							<gcse:search></gcse:search>
+						</div>
+
+					</div>
+					<div class="widget widget_archive">
+						<h2 class="widgettitle">Browse Archives</h2>
+						<select name="archive-dropdown"
+							onchange='document.location.href=this.options[this.selectedIndex].value;'>
+							<option value="">Select Month</option>
+							<option value='http://raleighpublicrecord.org/2014/04/'>
+								April 2014</option>
+							<option value='http://raleighpublicrecord.org/2014/03/'>
+								March 2014</option>
+							<option value='http://raleighpublicrecord.org/2014/02/'>
+								February 2014</option>
+							<option value='http://raleighpublicrecord.org/2014/01/'>
+								January 2014</option>
+							<option value='http://raleighpublicrecord.org/2013/12/'>
+								December 2013</option>
+							<option value='http://raleighpublicrecord.org/2013/11/'>
+								November 2013</option>
+							<option value='http://raleighpublicrecord.org/2013/10/'>
+								October 2013</option>
+							<option value='http://raleighpublicrecord.org/2013/09/'>
+								September 2013</option>
+							<option value='http://raleighpublicrecord.org/2013/08/'>
+								August 2013</option>
+							<option value='http://raleighpublicrecord.org/2013/07/'>
+								July 2013</option>
+							<option value='http://raleighpublicrecord.org/2013/06/'>
+								June 2013</option>
+							<option value='http://raleighpublicrecord.org/2013/05/'>
+								May 2013</option>
+							<option value='http://raleighpublicrecord.org/2013/04/'>
+								April 2013</option>
+							<option value='http://raleighpublicrecord.org/2013/03/'>
+								March 2013</option>
+							<option value='http://raleighpublicrecord.org/2013/02/'>
+								February 2013</option>
+							<option value='http://raleighpublicrecord.org/2013/01/'>
+								January 2013</option>
+							<option value='http://raleighpublicrecord.org/2012/12/'>
+								December 2012</option>
+							<option value='http://raleighpublicrecord.org/2012/11/'>
+								November 2012</option>
+							<option value='http://raleighpublicrecord.org/2012/10/'>
+								October 2012</option>
+							<option value='http://raleighpublicrecord.org/2012/09/'>
+								September 2012</option>
+							<option value='http://raleighpublicrecord.org/2012/08/'>
+								August 2012</option>
+							<option value='http://raleighpublicrecord.org/2012/07/'>
+								July 2012</option>
+							<option value='http://raleighpublicrecord.org/2012/06/'>
+								June 2012</option>
+							<option value='http://raleighpublicrecord.org/2012/05/'>
+								May 2012</option>
+							<option value='http://raleighpublicrecord.org/2012/04/'>
+								April 2012</option>
+							<option value='http://raleighpublicrecord.org/2012/03/'>
+								March 2012</option>
+							<option value='http://raleighpublicrecord.org/2012/02/'>
+								February 2012</option>
+							<option value='http://raleighpublicrecord.org/2012/01/'>
+								January 2012</option>
+							<option value='http://raleighpublicrecord.org/2011/12/'>
+								December 2011</option>
+							<option value='http://raleighpublicrecord.org/2011/11/'>
+								November 2011</option>
+							<option value='http://raleighpublicrecord.org/2011/10/'>
+								October 2011</option>
+							<option value='http://raleighpublicrecord.org/2011/09/'>
+								September 2011</option>
+							<option value='http://raleighpublicrecord.org/2011/08/'>
+								August 2011</option>
+							<option value='http://raleighpublicrecord.org/2011/07/'>
+								July 2011</option>
+							<option value='http://raleighpublicrecord.org/2011/06/'>
+								June 2011</option>
+							<option value='http://raleighpublicrecord.org/2011/05/'>
+								May 2011</option>
+							<option value='http://raleighpublicrecord.org/2011/04/'>
+								April 2011</option>
+							<option value='http://raleighpublicrecord.org/2011/03/'>
+								March 2011</option>
+							<option value='http://raleighpublicrecord.org/2011/02/'>
+								February 2011</option>
+							<option value='http://raleighpublicrecord.org/2011/01/'>
+								January 2011</option>
+							<option value='http://raleighpublicrecord.org/2010/12/'>
+								December 2010</option>
+							<option value='http://raleighpublicrecord.org/2010/11/'>
+								November 2010</option>
+							<option value='http://raleighpublicrecord.org/2010/10/'>
+								October 2010</option>
+							<option value='http://raleighpublicrecord.org/2010/09/'>
+								September 2010</option>
+							<option value='http://raleighpublicrecord.org/2010/08/'>
+								August 2010</option>
+							<option value='http://raleighpublicrecord.org/2010/07/'>
+								July 2010</option>
+							<option value='http://raleighpublicrecord.org/2010/06/'>
+								June 2010</option>
+							<option value='http://raleighpublicrecord.org/2010/05/'>
+								May 2010</option>
+							<option value='http://raleighpublicrecord.org/2010/04/'>
+								April 2010</option>
+							<option value='http://raleighpublicrecord.org/2010/03/'>
+								March 2010</option>
+							<option value='http://raleighpublicrecord.org/2010/02/'>
+								February 2010</option>
+							<option value='http://raleighpublicrecord.org/2010/01/'>
+								January 2010</option>
+							<option value='http://raleighpublicrecord.org/2009/12/'>
+								December 2009</option>
+							<option value='http://raleighpublicrecord.org/2009/11/'>
+								November 2009</option>
+							<option value='http://raleighpublicrecord.org/2009/10/'>
+								October 2009</option>
+							<option value='http://raleighpublicrecord.org/2009/09/'>
+								September 2009</option>
+							<option value='http://raleighpublicrecord.org/2009/08/'>
+								August 2009</option>
+							<option value='http://raleighpublicrecord.org/2009/07/'>
+								July 2009</option>
+							<option value='http://raleighpublicrecord.org/2009/06/'>
+								June 2009</option>
+							<option value='http://raleighpublicrecord.org/2009/05/'>
+								May 2009</option>
+							<option value='http://raleighpublicrecord.org/2009/04/'>
+								April 2009</option>
+							<option value='http://raleighpublicrecord.org/2009/03/'>
+								March 2009</option>
+							<option value='http://raleighpublicrecord.org/2009/02/'>
+								February 2009</option>
+							<option value='http://raleighpublicrecord.org/2009/01/'>
+								January 2009</option>
+							<option value='http://raleighpublicrecord.org/2008/12/'>
+								December 2008</option>
+							<option value='http://raleighpublicrecord.org/2008/11/'>
+								November 2008</option>
+							<option value='http://raleighpublicrecord.org/2008/09/'>
+								September 2008</option>
+						</select>
+					</div>
+					<ul id="ft-social" class="social-icons">
+						<li><a href="http://raleighpublicrecord.org/feed/"
+							title="Link to RSS Feed"><i class="icon-rss"></i></a></li>
+						<li><a href="http://www.facebook.com/raleighpublicrecord"
+							title="Link to Facebook Profile"><i class="icon-facebook"></i></a></li>
+						<li><a href="https://twitter.com/ralpublicrecord"
+							title="Link to Twitter Page"><i class="icon-twitter"></i></a></li>
+						<li><a
+							href="https://plus.google.com/u/0/104286619256994004238"
+							title="Link to Google Plus Page"><i class="icon-gplus"></i></a></li>
+					</ul>
+				</div>
+
 			</div>
-		</div><!-- /#boilerplate -->
-	</footer>
-</div>
+			<div id="boilerplate" class="row-fluid clearfix">
+				<p>&copy; Copyright 2014, Raleigh Public Record</p>
+				<ul id="menu-footer-bottom" class="menu">
+					<li id="menu-item-19742"
+						class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19742"><a
+						href="http://raleighpublicrecord.org/transparency-2/financials/">Financials</a></li>
+					<li id="menu-item-19731"
+						class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19731"><a
+						href="http://raleighpublicrecord.org/terms-of-use-2/">Terms of
+							Use</a></li>
+					<li id="menu-item-19743"
+						class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19743"><a
+						href="http://raleighpublicrecord.org/privacy-policy/">Privacy
+							Policy</a></li>
+				</ul>
+				<div class="footer-bottom clearfix">
+					<!-- If you enjoy this theme and use it on a production site we would appreciate it if you would leave the credit in place. Thanks :) -->
+					<p class="footer-credit">
+						This site built with <a href="http://largoproject.org">Project
+							Largo</a> from the <a href="http://investigativenewsnetwork.org">Investigative
+							News Network</a> and proudly powered by <a
+							href="http://wordpress.org" rel="nofollow">WordPress</a>.
+					</p>
+					<p class="back-to-top">
+						<a href="#top">Back to top &uarr;</a>
+					</p>
+				</div>
+			</div>
+			<!-- /#boilerplate -->
+		</footer>
+	</div>
 
 	<!-- Quantcast Tag -->
 	<script type="text/javascript">
-	var _qevents = _qevents || [];
+		var _qevents = _qevents || [];
 
-	(function() {
-	var elem = document.createElement('script');
-	elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
-	elem.async = true;
-	elem.type = "text/javascript";
-	var scpt = document.getElementsByTagName('script')[0];
-	scpt.parentNode.insertBefore(elem, scpt);
-	})();
+		(function() {
+			var elem = document.createElement('script');
+			elem.src = (document.location.protocol == "https:" ? "https://secure"
+					: "http://edge")
+					+ ".quantserve.com/quant.js";
+			elem.async = true;
+			elem.type = "text/javascript";
+			var scpt = document.getElementsByTagName('script')[0];
+			scpt.parentNode.insertBefore(elem, scpt);
+		})();
 
-	_qevents.push({
-	qacct:"p-69zIWcWF__1G-"
-	});
+		_qevents.push({
+			qacct : "p-69zIWcWF__1G-"
+		});
 	</script>
 
 	<noscript>
-	<div style="display:none;">
-	<img src="//pixel.quantserve.com/pixel/p-69zIWcWF__1G-.gif" border="0" height="1" width="1" alt="Quantcast"/>
-	</div>
+		<div style="display: none;">
+			<img src="//pixel.quantserve.com/pixel/p-69zIWcWF__1G-.gif"
+				border="0" height="1" width="1" alt="Quantcast" />
+		</div>
 	</noscript>
 	<!-- End Quantcast tag -->
 
 	<!-- Newscurve -->
 	<script type="text/javascript">
-	var npc = npc || [];
-	npc.push(['_customerId', '9a267929255567ae4a23']);
+		var npc = npc || [];
+		npc.push([ '_customerId', '9a267929255567ae4a23' ]);
 
-	(function() {
-	  var nc = document.createElement('script'); nc.type = 'text/javascript'; nc.async = true;
-	  nc.src = 'http://t.neodatagroup.com/npc.js';
-	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(nc, s);
-	})();
+		(function() {
+			var nc = document.createElement('script');
+			nc.type = 'text/javascript';
+			nc.async = true;
+			nc.src = 'http://t.neodatagroup.com/npc.js';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(nc, s);
+		})();
 	</script>
 	<!-- End Newscurve -->
 
-		<!--Facebook-->
-		<div id="fb-root"></div>
-		<script>(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) return;
-		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
+	<!--Facebook-->
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id))
+				return;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 
-		<!--Twitter-->
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	<!--Twitter-->
+	<script>
+		!function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/
+					.test(d.location) ? 'http' : 'https';
+			if (!d.getElementById(id)) {
+				js = d.createElement(s);
+				js.id = id;
+				js.src = p + "://platform.twitter.com/widgets.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}
+		}(document, "script", "twitter-wjs");
+	</script>
 
-		<!--Google Plus-->
-		<script type="text/javascript">
-		  (function() {
-		    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	<!--Google Plus-->
+	<script type="text/javascript">
+		(function() {
+			var po = document.createElement('script');
+			po.type = 'text/javascript';
+			po.async = true;
 			po.src = 'https://apis.google.com/js/plusone.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-		  })();
-		</script>
-	<script type='text/javascript' src='http://raleighpublicrecord.wpengine.netdna-cdn.com/wp-content/themes/largo/js/largoPlugins.js?ver=1.0'></script>
-<script type='text/javascript' src='http://raleighpublicrecord.wpengine.netdna-cdn.com/wp-content/themes/largo/js/largoCore.js?ver=1.0'></script>
-<script type='text/javascript' src='http://raleighpublicrecord.wpengine.netdna-cdn.com/wp-content/themes/largo/js/st_buttons.js?ver=1.0'></script>
-<script type='text/javascript' src='http://raleighpublicrecord.wpengine.netdna-cdn.com/wp-content/themes/largo/js/jquery.idTabs.js?ver=1.0'></script>
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(po, s);
+		})();
+	</script>
+	<script type='text/javascript'
+		src='http://raleighpublicrecord.wpengine.netdna-cdn.com/wp-content/themes/largo/js/largoPlugins.js?ver=1.0'></script>
+	<script type='text/javascript'
+		src='http://raleighpublicrecord.wpengine.netdna-cdn.com/wp-content/themes/largo/js/largoCore.js?ver=1.0'></script>
+	<script type='text/javascript'
+		src='http://raleighpublicrecord.wpengine.netdna-cdn.com/wp-content/themes/largo/js/st_buttons.js?ver=1.0'></script>
+	<script type='text/javascript'
+		src='http://raleighpublicrecord.wpengine.netdna-cdn.com/wp-content/themes/largo/js/jquery.idTabs.js?ver=1.0'></script>
 
 </body>
 </html>
