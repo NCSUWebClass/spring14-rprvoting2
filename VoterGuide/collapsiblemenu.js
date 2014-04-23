@@ -1,6 +1,6 @@
 $(document).ready(
 		function() {
-			$(".candidate_county_commission_item").hide();
+			$(".candidate_county_commission_item");
 			$(".candidate_county_commission tr:first-child").show();
 			$(".candidate_table tr.candidate_county_commission").click(
 					function() {
@@ -35,4 +35,11 @@ $(document).ready(function() {
 	$(".candidate_table tr.candidate_nc_house_49").click(function() {
 		$(this).nextAll("tr.candidate_nc_house_49_item").fadeToggle();
 	});
+});
+
+$(document).ready(function() {
+$("#joeBryan").hover(
+	function(e) { $("#hiddendiv_joeBryan").show().css('top', (e.pageY-100)).css('left', (e.pageX+100)); }, 
+	function() { $("#hiddendiv_joeBryan").hide(); }
+);
 });
