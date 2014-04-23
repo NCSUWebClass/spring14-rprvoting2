@@ -19,9 +19,11 @@
 }
 
 .position {
-	text-align: center;
+	text-align: left;
 	vertical-align: middle;
 	text-decoration: underline;
+	border-right-style:none;
+	border-left-style:none;
 }
 
 .articles_table {
