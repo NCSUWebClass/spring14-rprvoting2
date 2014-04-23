@@ -6,10 +6,13 @@
 .candidate_county_commission, .candidate_wake_da, .candidate_clerk_of_court, .candidate_nc_senate_15, .candidate_nc_house_49{
 	background-color: #2275BB;
 	color: white;
+
 }
 
 .position{
-	text-align:center;
+	text-align:left;
 	vertical-align:middle;
 	text-decoration:underline;
+	border-right-style:none;
+	border-left-style:none;
 }
