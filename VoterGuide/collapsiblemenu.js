@@ -243,13 +243,11 @@ $("#hiddendiv_derekKiszely").hover(
 
 function loadCandidate(name) {
 	var xmlHttp = null;
-	response.addHeader("Access-Control-Allow-Origin", "*");
-	var url = "http://152.1.13.65/view.php?candidate=" + name;
+	var url = "view.php?candidate=" + name;
 	xmlHttp = new XMLHttpRequest();
 	xmlHttp.open( "GET", url, false);
 	xmlHttp.send(null);
 	var html = xmlHttp.responseText;
-	alert(html);
+	return html;
 
 }
-
